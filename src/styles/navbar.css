@@ -178,6 +178,7 @@
   }
 
   .navbar__mobile-menu {
+    display: block;
     width: min(100%, calc(100% - 24px));
     margin: 0 auto 14px;
     max-height: 0;
@@ -196,7 +197,6 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-
     background: rgba(8, 4, 28, 0.96);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
