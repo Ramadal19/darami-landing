@@ -26,7 +26,6 @@ button {
 
 .app-shell {
   min-height: 100vh;
-  padding-top: 88px;
   background:
     radial-gradient(circle at top right, rgba(124, 58, 237, 0.18), transparent 30%),
     #050216;
@@ -41,14 +40,3 @@ button {
   padding: 0 40px;
 }
 
-@media (max-width: 900px) {
-  .app-shell {
-    padding-top: 84px;
-  }
-}
-
-@media (max-width: 640px) {
-  .app-shell {
-    padding-top: 118px;
-  }
-}

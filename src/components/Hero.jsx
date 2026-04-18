@@ -3,13 +3,13 @@ import orbImage from "../assets/darami-orb.png";
 import "../styles/hero.css";
 
 const sparkles = [
-  { top: "18%", left: "62%", size: 6, delay: 0.2 },
-  { top: "24%", left: "70%", size: 5, delay: 1.2 },
-  { top: "35%", left: "65%", size: 7, delay: 0.8 },
-  { top: "42%", left: "58%", size: 5, delay: 1.8 },
-  { top: "50%", left: "75%", size: 6, delay: 0.4 },
-  { top: "60%", left: "66%", size: 5, delay: 1.5 },
-  { top: "32%", left: "30%", size: 7, delay: 0.9 },
+  { top: "18%", left: "52%", size: 6, delay: 0.2 },
+  { top: "24%", left: "65%", size: 5, delay: 1.2 },
+  { top: "35%", left: "55%", size: 7, delay: 0.8 },
+  { top: "42%", left: "48%", size: 5, delay: 1.8 },
+  { top: "50%", left: "69%", size: 6, delay: 0.4 },
+  { top: "60%", left: "56%", size: 5, delay: 1.5 },
+  { top: "32%", left: "32%", size: 7, delay: 0.9 },
   { top: "51%", left: "35%", size: 6, delay: 1.1 },
 ];
 
