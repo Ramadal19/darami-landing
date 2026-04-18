@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import orbImage from "../assets/darami-orb.png";
+import orbImage from "../assets/darami-orb.webp";
 import "../styles/hero.css";
 
 const sparkles = [
@@ -50,6 +50,9 @@ export default function Hero() {
               src={orbImage}
               alt="Darami technology orb"
               className="hero__orb-image"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
             />
 
             {sparkles.map((sparkle, index) => (

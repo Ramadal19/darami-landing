@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -47,7 +47,14 @@ export default function Navbar() {
       <div className="navbar__inner">
         <div className="navbar__brand">
           <div className="logo-container">
-            <img src={logo} alt="Darami Logo" className="logo-img" />
+            <img
+              src={logo}
+              alt="Darami Logo"
+              className="logo-img"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
           </div>
         </div>
 
