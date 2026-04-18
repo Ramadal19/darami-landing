@@ -184,7 +184,7 @@
   .hero__inner {
     width: min(100%, calc(100% - 24px));
     grid-template-columns: 1fr;
-    row-gap: 24px;
+    row-gap: 12px;
     min-height: auto;
   }
 
