@@ -177,13 +177,13 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 96px 0 40px;
   }
 
   .hero__inner {
-    width: min(100%, calc(100% - 40px));
+    width: min(100%, calc(100% - 32px));
     grid-template-columns: 1fr;
-    row-gap: 28px;
+    row-gap: 24px;
     min-height: auto;
   }
 
@@ -191,43 +191,73 @@
     text-align: center;
   }
 
+  .hero__title {
+    text-align: center;
+  }
+
   .hero__description {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    max-width: 680px;
   }
 
   .hero__actions {
     justify-content: center;
   }
 
+  /* 🔥 ORB ARRIBA */
   .hero__visual {
     order: -1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+
+    /* 👇 importante: eliminar hacks de desktop */
+    margin-right: 0 !important;
+    padding-right: 0;
   }
 
   .hero__orb-wrap {
-    max-width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: none !important;
+    width: 100%;
+    max-width: 420px;
   }
 
   .hero__orb-image {
     width: 100%;
-    margin-left: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* 🔥 SIN SPARKLES EN MOBILE */
+  .hero__sparkle {
+    display: none;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding: 72px 0 32px;
+    padding: 92px 0 32px;
   }
 
   .hero__inner {
-    width: min(100%, calc(100% - 32px));
+    width: min(100%, calc(100% - 24px));
   }
 
   .hero__title {
-    font-size: clamp(2rem, 10vw, 3.2rem);
-    line-height: 1.05;
+    font-size: clamp(2.2rem, 10vw, 3.3rem);
+    line-height: 1.03;
+  }
+
+  .hero__description {
+    font-size: 0.98rem;
+    line-height: 1.65;
   }
 
   .hero__actions {
@@ -243,6 +273,6 @@
   }
 
   .hero__orb-wrap {
-    max-width: 420px;
+    max-width: 360px;
   }
 }
