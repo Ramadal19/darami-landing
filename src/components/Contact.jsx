@@ -113,18 +113,37 @@ export default function Contact() {
                   <strong>Location:</strong> Katy, TX, USA
                 </p>
 
-                <p>
-                  <strong>LinkedIn:</strong>{" "}
+              </div>
+              <div className="contact-info-card__social">
+                <p className="contact-info-card__social-label">Follow Us</p>
+
+                <div className="contact-info-card__social-buttons">
+                  {/* ✅ ACTIVO */}
                   <a
                     href="https://www.linkedin.com/company/darami"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact__link"
+                    rel="noreferrer"
+                    className="contact-btn-active"
                   >
-                    linkedin.com/company/darami
+                    LinkedIn
                   </a>
-                </p>
-              </div>
+
+                  {/* ⛔ DESACTIVOS */}
+                  <button type="button" disabled className="contact-btn-disabled">
+                    Instagram
+                  </button>
+                  <button type="button" disabled className="contact-btn-disabled">
+                    Facebook
+                  </button>
+                  <button type="button" disabled className="contact-btn-disabled">
+                    X / Twitter
+                  </button>
+                </div>
+
+  <p className="contact-info-card__message">
+    We work with businesses looking to improve operations, strengthen their digital presence, and build smarter systems.
+  </p>
+</div>
             </div>
           </div>
         </div>

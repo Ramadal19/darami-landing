@@ -152,6 +152,89 @@
 .contact__link:hover {
   color: #ffffff;
 }
+/* ===== SOCIAL / DISABLED BUTTONS ===== */
+
+.contact-info-card__social {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info-card__social-label {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: #d4d4d4;
+  text-transform: uppercase;
+}
+
+/* botones */
+
+.contact-info-card__social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* botón deshabilitado estilo premium */
+
+.contact-btn-disabled {
+  padding: 10px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: not-allowed;
+
+  transition: all 0.3s ease;
+}
+
+.contact-btn-disabled:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.contact-btn-active {
+  padding: 10px 9px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #683dff,
+    #ff4d9d,
+    #ffa33c
+  );
+
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 25px rgba(217, 70, 239, 0.2);
+
+  transition: all 0.25s ease;
+}
+
+.contact-btn-active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(217, 70, 239, 0.35);
+}
+
+/* mensaje final */
+
+.contact-info-card__message {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
 
 @media (max-width: 980px) {
   .contact__content {
