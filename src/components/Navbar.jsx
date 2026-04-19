@@ -46,17 +46,17 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar__inner">
         <div className="navbar__brand">
-          <div className="logo-container">
-            <img
-              src={logo}
-              alt="Darami Logo"
-              className="logo-img"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-            />
-          </div>
-        </div>
+  <a href="#home" onClick={closeMenu} className="logo-container">
+    <img
+      src={logo}
+      alt="Darami Logo"
+      className="logo-img"
+      loading="eager"
+      decoding="async"
+      fetchPriority="high"
+    />
+  </a>
+</div>
 
         <nav className="navbar__nav">
           <a
