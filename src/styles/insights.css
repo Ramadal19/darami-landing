@@ -34,51 +34,97 @@
 .insights__subtitle {
   margin: 18px auto 0;
   max-width: 700px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
 }
 
 .insights__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
 }
 
 .insight-card {
   padding: 24px;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(
     135deg,
     rgba(104, 61, 255, 0.14),
     rgba(255, 77, 157, 0.1),
     rgba(255, 163, 60, 0.12)
-    );
+  );
   backdrop-filter: blur(10px);
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .insight-card:hover {
-    transform: translateY(-6px);
-    background: linear-gradient(
+  transform: translateY(-6px);
+  background: linear-gradient(
     135deg,
     rgba(104, 61, 255, 0.44),
     rgba(255, 77, 157, 0.4),
     rgba(255, 163, 60, 0.42)
   );
-    border-color: rgba(255, 255, 255, 0.6);
-
+  border-color: rgba(255, 255, 255, 0.6);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.25),
     0 0 20px rgba(217, 70, 239, 0.08);
 }
-.insight-card:hover::before {
-  opacity: 1;
-}
 
 .insight-card__title {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
+  color: #ffffff;
 }
 
 .insight-card__description {
-  color: rgba(255,255,255,0.75);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .insights {
+    padding: 70px 0 90px;
+  }
+
+  .insights__title {
+    font-size: 2.1rem;
+  }
+
+  .insights__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .insights__header {
+    margin-bottom: 34px;
+  }
+
+  .insights__title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .insights__subtitle {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .insights__grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  .insight-card {
+    width: 100%;
+    min-width: 0;
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
 }
