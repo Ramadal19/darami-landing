@@ -27,6 +27,60 @@ const solutions = [
   },
 ];
 
+const packages = [
+  {
+    name: "Starter",
+    description: "A solid starting point for new or growing businesses.",
+    items: ["Brand foundation", "Landing page", "Core digital presence"],
+  },
+  {
+    name: "Growth",
+    description: "For businesses ready to improve visibility and performance.",
+    items: [
+      "Expanded branding",
+      "Professional website",
+      "Workflow improvement",
+    ],
+    featured: true,
+  },
+  {
+    name: "Pro Automation",
+    description: "For businesses ready to scale with smarter systems.",
+    items: [
+      "Custom solutions",
+      "Process automation",
+      "Advanced integrations",
+    ],
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Consultation",
+    description:
+      "We learn about your business, your goals, and the challenges you want to solve.",
+  },
+  {
+    number: "02",
+    title: "Strategy",
+    description:
+      "We define the right solution and align it with your priorities and growth stage.",
+  },
+  {
+    number: "03",
+    title: "Build",
+    description:
+      "We create the digital system, automation, or experience your business needs.",
+  },
+  {
+    number: "04",
+    title: "Launch",
+    description:
+      "We deliver, refine, and prepare everything for real-world impact.",
+  },
+];
+
 export default function Solutions() {
   return (
     <section id="solutions" className="solutions">
@@ -52,6 +106,86 @@ export default function Solutions() {
               </p>
             </article>
           ))}
+        </div>
+
+        <div className="solutions__extra">
+          <div className="solutions__packages">
+            <div className="solutions__section-header">
+              <p className="solutions__section-eyebrow">SERVICE PACKAGES</p>
+              <h3 className="solutions__section-title">
+                Flexible solutions for different stages of growth
+              </h3>
+              <p className="solutions__section-subtitle">
+                Our services are designed to adapt to your business needs, from
+                foundational digital presence to advanced automation systems.
+              </p>
+            </div>
+
+            <div className="solutions__packages-grid">
+              {packages.map((pkg) => (
+                <article
+                  key={pkg.name}
+                  className={`package-card ${
+                    pkg.featured ? "package-card--featured" : ""
+                  }`}
+                >
+                  {pkg.featured && (
+                    <span className="package-card__badge">Most Popular</span>
+                  )}
+
+                  <h4 className="package-card__title">{pkg.name}</h4>
+                  <p className="package-card__description">{pkg.description}</p>
+
+                  <ul className="package-card__list">
+                    {pkg.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="solutions__process">
+            <div className="solutions__section-header">
+              <p className="solutions__section-eyebrow">HOW IT WORKS</p>
+              <h3 className="solutions__section-title">
+                A simple process with meaningful results
+              </h3>
+            </div>
+
+            <div className="solutions__process-grid">
+              {processSteps.map((step) => (
+                <article key={step.number} className="process-card">
+                  <div className="process-card__number">{step.number}</div>
+                  <h4 className="process-card__title">{step.title}</h4>
+                  <p className="process-card__description">{step.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="solutions__cta">
+            <p className="solutions__section-eyebrow">LET’S BUILD</p>
+            <h3 className="solutions__cta-title">Ready to grow your business?</h3>
+            <p className="solutions__cta-text">
+              Whether you need automation, a digital platform, or a stronger
+              online presence, we create solutions designed for real business
+              impact.
+            </p>
+
+            <div className="solutions__cta-actions">
+              <a href="#contact" className="solutions__btn solutions__btn--primary">
+                <span className="btn-line-1">Start Your Project</span>
+                <span className="btn-line-2">Book a Consultation</span>
+              </a>
+            </div>
+
+            <p className="solutions__cta-note">
+              We do not just create digital products — we build systems that
+              generate results.
+            </p>
+          </div>
         </div>
       </div>
     </section>

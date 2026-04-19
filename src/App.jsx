@@ -4,6 +4,7 @@ import Solutions from "./components/Solutions";
 import About from "./components/About";
 import Insights from "./components/Insights";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import "./styles/app.css";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       <About />
       <Insights />
       <Contact />
+      <Footer />
     </div>
   );
 }
